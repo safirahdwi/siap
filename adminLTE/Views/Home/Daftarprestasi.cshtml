@@ -1,18 +1,17 @@
 ﻿
 @{
-    ViewData["Title"] = "Daftaranggota";
+    ViewData["Title"] = "Daftarprestasi";
     Layout = "~/Views/Shared/_MainMenu.cshtml";
 }
-
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Daftar Anggota
+        Daftar Prestasi
         <small>advanced tables</small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="https://localhost:44384/Home/Beranda"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Daftar Anggota</li>
+        <li class="active">Daftar Prestasi</li>
     </ol>
 </section>
 
@@ -24,41 +23,43 @@
                 <div class="box-body">
                     <div class="dataTables_wrapper form-inline dt-bootstrap" id="example1_wrapper">
                         <div class="row">
-                        <div class="col-sm-6">
-                            <div id="example1_length" class="dataTables_length">
-                            <label>
-                                Show 
-                                <select class="form-control input-sm" aria-controls="example1" name="example1_length">
-                                <option value="10">10</option>
-                                <option value="25">25</option>
-                                <option value="50">50</option>
-                                <option value="100">100</option>
-                                 </select> 
-                                entries
-                                </label>
+                            <div class="col-sm-6">
+                                <div id="example1_length" class="dataTables_length">
+                                    <label>
+                                        Show
+                                        <select class="form-control input-sm" aria-controls="example1" name="example1_length">
+                                            <option value="10">10</option>
+                                            <option value="25">25</option>
+                                            <option value="50">50</option>
+                                            <option value="100">100</option>
+                                        </select>
+                                        entries
+                                    </label>
                                 </div>
                             </div>
-                        <div class="col-sm-6">
-                            <div id="example1_filter" class="dataTables_filter">
-                            <label>
-                                Search:
-                                <input aria-controls="example1" placeholder="" class="form-control input-sm" type="search">
-                                </label>
+                            <div class="col-sm-6">
+                                <div id="example1_filter" class="dataTables_filter">
+                                    <label>
+                                        Search:
+                                        <input aria-controls="example1" placeholder="" class="form-control input-sm" type="search">
+                                    </label>
+                                </div>
                             </div>
-                            </div>
-                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-sm-12">
                                 <table aria-describedby="example1_info" role="grid" id="example1" class="table table-bordered table-striped dataTable">
                                     <thead>
                                         <tr role="row">
-                                        <th aria-label="Rendering engine: activate to sort column descending" aria-sort="ascending" style="width: 182.467px;" colspan="1" rowspan="1" aria-controls="example1" tabindex="0" class="sorting_asc">No</th>
-                                        <th aria-label="Browser: activate to sort column ascending" style="width: 225.017px;" colspan="1" rowspan="1" aria-controls="example1" tabindex="0" class="sorting">Nama</th>
-                                        <th aria-label="Platform(s): activate to sort column ascending" style="width: 198.733px;" colspan="1" rowspan="1" aria-controls="example1" tabindex="0" class="sorting">Nim</th>
-                                        <th aria-label="Engine version: activate to sort column ascending" style="width: 155.9px;" colspan="1" rowspan="1" aria-controls="example1" tabindex="0" class="sorting">Jabatan</th>
-                                        <th aria-label="CSS grade: activate to sort column ascending" style="width: 110.883px;" colspan="1" rowspan="1" aria-controls="example1" tabindex="0" class="sorting">Action</th></tr>
+                                            <th aria-label="Rendering engine: activate to sort column descending" aria-sort="ascending" style="width: 182.467px;" colspan="1" rowspan="1" aria-controls="example1" tabindex="0" class="sorting_asc">No</th>
+                                            <th aria-label="Browser: activate to sort column ascending" style="width: 225.017px;" colspan="1" rowspan="1" aria-controls="example1" tabindex="0" class="sorting">Nama</th>
+                                            <th aria-label="Platform(s): activate to sort column ascending" style="width: 198.733px;" colspan="1" rowspan="1" aria-controls="example1" tabindex="0" class="sorting">Prestasi</th>
+                                            <th aria-label="Engine version: activate to sort column ascending" style="width: 155.9px;" colspan="1" rowspan="1" aria-controls="example1" tabindex="0" class="sorting">Tahun</th>
+                                            <th aria-label="CSS grade: activate to sort column ascending" style="width: 110.883px;" colspan="1" rowspan="1" aria-controls="example1" tabindex="0" class="sorting">Action</th>
+                                        </tr>
                                     </thead>
-                                    <tbody> <tr class="odd" role="row">
+                                    <tbody>
+                                        <tr class="odd" role="row">
                                             <td class="sorting_1">Gecko</td>
                                             <td>Firefox 1.0</td>
                                             <td>Win 98+ / OSX.2+</td>

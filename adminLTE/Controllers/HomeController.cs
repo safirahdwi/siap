@@ -28,7 +28,19 @@ namespace adminLTE.Controllers
         {
             return View();
         }
+        public IActionResult Daftarprestasi()
+        {
+            return View();
+        }
+        public IActionResult Pengarsipan()
+        {
+            return View();
+        }
         public IActionResult Publikasi()
+        {
+            return View();
+        }
+        public IActionResult PreviewPublikasi()
         {
             return View();
         }

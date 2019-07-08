@@ -67,3 +67,7 @@ C:\Users\Nadhilah\source\repos\pklkita\adminLTE\obj\Debug\netcoreapp2.2\Razor\Vi
 C:\Users\Nadhilah\source\repos\pklkita\adminLTE\obj\Debug\netcoreapp2.2\Razor\Views\Home\Profile.g.cshtml.cs
 C:\Users\Nadhilah\source\repos\pklkita\adminLTE\obj\Debug\netcoreapp2.2\Razor\Views\Home\Daftaranggota.g.cshtml.cs
 C:\Users\Nadhilah\source\repos\pklkita\adminLTE\obj\Debug\netcoreapp2.2\Razor\Views\Home\Publikasi.g.cshtml.cs
+C:\Users\Nadhilah\source\repos\pklkita\adminLTE\obj\Debug\netcoreapp2.2\Razor\Views\Home\coba.g.cshtml.cs
+C:\Users\Nadhilah\source\repos\pklkita\adminLTE\obj\Debug\netcoreapp2.2\Razor\Views\Home\Daftarprestasi.g.cshtml.cs
+C:\Users\Nadhilah\source\repos\pklkita\adminLTE\obj\Debug\netcoreapp2.2\Razor\Views\Home\Pengarsipan.g.cshtml.cs
+C:\Users\Nadhilah\source\repos\pklkita\adminLTE\obj\Debug\netcoreapp2.2\Razor\Views\Home\PreviewPublikasi.g.cshtml.cs
