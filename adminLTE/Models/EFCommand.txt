@@ -1,0 +1,3 @@
+Scaffold-DbContext "Server=172.17.0.136;Database=DBINTEGRASI_MASTER_BAYUPPKU2;uid=sys-ormawa;pwd=PKLormawa1p8;ConnectRetryCount=0;" Microsoft.EntityFrameworkCore.SqlServer -o Models -f
+
+dotnet ef dbcontext scaffold "Server=172.17.0.136;Database=DBINTEGRASI_MASTER_BAYUPPKU2;uid=sys-ormawa;pwd=PKLormawa1p8;ConnectRetryCount=0" Microsoft.EntityFrameworkCore.SqlServer -o Models -f
