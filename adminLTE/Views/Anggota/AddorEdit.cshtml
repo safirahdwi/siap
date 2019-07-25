@@ -1,4 +1,4 @@
-﻿@model adminLTE.Models.Anggota
+﻿@model adminLTE.ViewModel.AnggotaOrmawaViewModel
 
 @{
     ViewData["Title"] = "Create";
@@ -19,29 +19,29 @@
 <section class="content">
     <div class="row">
         <div class="col-md-4">
-            <form asp-action="AddOrEdit">
+            <form asp-controller="Anggota" asp-action="AddOrEdit" method="post">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <input type="hidden" asp-for="AnggotaID" />
+                <input type="hidden" asp-for="Id" />
                 <div class="form-group">
-                    <label asp-for="Nama" class="control-label"></label>
-                    <input asp-for="Nama" class="form-control" />
-                    <span asp-validation-for="Nama" class="text-danger"></span>
+                    <label class="control-label"> Mahasiswa</label>
+                    <input asp-for="MahasiswaId" class="form-control" />
+                    <span asp-validation-for="MahasiswaId" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="Nim" class="control-label"></label>
-                    <input asp-for="Nim" class="form-control" />
-                    <span asp-validation-for="Nim" class="text-danger"></span>
+                    <label class="control-label">Ormawa</label>
+                    <input asp-for="OrganisasiOrmawaId" class="form-control" />
+                    <span asp-validation-for="OrganisasiOrmawaId" class="text-danger"></span>
                 </div>
                 <div class="form-group" col-md-6>
-                    <label asp-for="Divisi" class="control-label"></label>
-                    <input asp-for="Divisi" class="form-control" />
-                    <span asp-validation-for="Divisi" class="text-danger"></span>
+                    <label class="control-label">Tanggal Bergabung</label>
+                    <input asp-for="TanggalBergabung" class="form-control" />
+                    <span asp-validation-for="TanggalBergabung" class="text-danger"></span>
                 </div>
-                <div class="form-group" col-md-6>
+                @*<div class="form-group" col-md-6>
                     <label asp-for="Jabatan" class="control-label"></label>
-                    <input asp-for="Jabatan" class="form-control" />
-                    <span asp-validation-for="Jabatan" class="text-danger"></span>
-                </div>
+                    <input asp-for="Id" class="form-control" />
+                    <span asp-validation-for="StatusAnggota" class="text-danger"></span>
+                </div>*@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <input type="submit" value="Submit" class="btn btn-primary btn-block" />

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<adminLTE.Models.Anggota>
+﻿@model adminLTE.ViewModel.AnggotaOrmawaViewModel
 
 @{
     ViewData["Title"] = "Daftar Anggota";
@@ -53,16 +53,16 @@
                                     <thead>
                                         <tr>
                                             <th>
-                                                @Html.DisplayNameFor(model => model.Nama)
+                                                @Html.DisplayNameFor(model => model.MahasiswaId)
                                             </th>
                                             <th>
-                                                @Html.DisplayNameFor(model => model.Nim)
+                                                @Html.DisplayNameFor(model => model.OrganisasiOrmawaId)
                                             </th>
                                             <th>
-                                                @Html.DisplayNameFor(model => model.Divisi)
+                                                @Html.DisplayNameFor(model => model.TanggalBergabung)
                                             </th>
                                             <th>
-                                                @Html.DisplayNameFor(model => model.Jabatan)
+                                                @Html.DisplayNameFor(model => model.StatusAnggota)
                                             </th>
                                             <th>
                                                 <a asp-action="AddOrEdit" class="btn btn-outline-success"><i class="far fa-plus-square"></i>Add Anggota</a>
@@ -70,27 +70,27 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach (var item in Model)
-                                        {
+                                        @*@foreach (var item in Model)
+                                        {*@
                                             <tr>
                                                 <td>
-                                                    @Html.DisplayFor(modelItem => item.Nama)
+                                                    @Html.DisplayFor(modelItem => modelItem.MahasiswaId)
                                                 </td>
                                                 <td>
-                                                    @Html.DisplayFor(modelItem => item.Nim)
+                                                    @Html.DisplayFor(modelItem => modelItem.OrganisasiOrmawaId)
                                                 </td>
                                                 <td>
-                                                    @Html.DisplayFor(modelItem => item.Divisi)
+                                                    @Html.DisplayFor(modelItem => modelItem.TanggalBergabung)
                                                 </td>
                                                 <td>
-                                                    @Html.DisplayFor(modelItem => item.Jabatan)
+                                                    @Html.DisplayFor(modelItem => modelItem.StatusAnggota)
                                                 </td>
-                                                <td>
+                                                @*<td>
                                                     <a asp-action="AddOrEdit" asp-route-id="@item.AnggotaID">Edit</a> |
                                                     <a asp-action="Delete" asp-route-id="@item.AnggotaID" onclick="return confirm('Are you sure to delete this record?')">Delete</a>
-                                                </td>
+                                                </td>*@
                                             </tr>
-                                        }
+                                        @*}*@
                                     </tbody>
                                 </table>
                             </div>

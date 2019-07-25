@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nadhilah\\Desktop\\New folder\\pklkita\\adminLTE\\adminLTE.csproj": {}
+    "E:\\IPB\\siap\\adminLTE\\adminLTE.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nadhilah\\Desktop\\New folder\\pklkita\\adminLTE\\adminLTE.csproj": {
+    "E:\\IPB\\siap\\adminLTE\\adminLTE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nadhilah\\Desktop\\New folder\\pklkita\\adminLTE\\adminLTE.csproj",
+        "projectUniqueName": "E:\\IPB\\siap\\adminLTE\\adminLTE.csproj",
         "projectName": "adminLTE",
-        "projectPath": "C:\\Users\\Nadhilah\\Desktop\\New folder\\pklkita\\adminLTE\\adminLTE.csproj",
-        "packagesPath": "C:\\Users\\Nadhilah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nadhilah\\Desktop\\New folder\\pklkita\\adminLTE\\obj\\",
+        "projectPath": "E:\\IPB\\siap\\adminLTE\\adminLTE.csproj",
+        "packagesPath": "C:\\Users\\Dwika Ayu Noianti\\.nuget\\packages\\",
+        "outputPath": "E:\\IPB\\siap\\adminLTE\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Nadhilah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dwika Ayu Noianti\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

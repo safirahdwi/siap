@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace adminLTE
 {
@@ -21,7 +22,10 @@ namespace adminLTE
         }
 
         public IConfiguration Configuration { get; }
-
+        private static readonly LoggerFactory DbLoggerFactory =
+            new LoggerFactory(new[] {
+                new Microsoft.Extensions.Logging.Debug.DebugLoggerProvider()
+            });
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -37,10 +41,12 @@ namespace adminLTE
             services.AddDbContext<AnggotaContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
 
-            services.AddDistributedMemoryCache();
-            services.AddSession();
-            services.AddDbContext<AkunPenggunaContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
+            //services.AddDistributedMemoryCache();
+            //services.AddSession();
+            //services.AddDbContext<AkunPenggunaContext>(options =>
+            //options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
+            var connectionString = Configuration.GetSection("ConnectionStrings");
+            services.AddDbContext<DBINTEGRASI_MASTER_BAYUPPKU2Context>(options => options.UseSqlServer(connectionString["DefaultConnection"]).UseLoggerFactory(DbLoggerFactory));
 
         }
 
