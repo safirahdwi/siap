@@ -7,16 +7,19 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using adminLTE.Models;
 using adminLTE.ViewModel;
+using adminLTE.BusinessModel;
 
 namespace adminLTE.Controllers
 {
     public class AnggotaController : Controller
     {
         private readonly DBINTEGRASI_MASTER_BAYUPPKU2Context _context;
+        private readonly Combobox _combobox;
 
-        public AnggotaController(DBINTEGRASI_MASTER_BAYUPPKU2Context context)
+        public AnggotaController(DBINTEGRASI_MASTER_BAYUPPKU2Context context, Combobox combobox)
         {
             _context = context;
+            _combobox = combobox;
         }
 
         // GET: Anggota
@@ -38,6 +41,8 @@ namespace adminLTE.Controllers
             //else
             //    return View(_context.AnggotaOrmawa.Find(id));
             AnggotaOrmawaViewModel vm = new AnggotaOrmawaViewModel();
+            vm.ListMahasiswa = new SelectList(_combobox.Mahasiswa(), "ID", "Value");
+            vm.ListOrmawa = new SelectList(_combobox.Ormawa(), "ID", "Value");
             return View(vm);
         }
 
@@ -58,6 +63,7 @@ namespace adminLTE.Controllers
                 ormawa.MahasiswaId = vm.MahasiswaId;
                 ormawa.OrganisasiOrmawaId = vm.OrganisasiOrmawaId;
                 ormawa.TanggalBergabung = vm.TanggalBergabung;
+                ormawa.StatusAnggota = vm.StatusAnggota;
                 _context.AnggotaOrmawa.Add(ormawa);
                 _context.SaveChanges();
                 //return RedirectToAction(nameof(Daftaranggota));
