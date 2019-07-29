@@ -24,6 +24,12 @@ namespace adminLTE.Controllers
         {
             return View();
         }
+
+        public IActionResult KalenderKegiatan()
+        {
+            return View();
+        }
+
         public IActionResult Daftaranggota()
         {
             return View();
@@ -44,10 +50,7 @@ namespace adminLTE.Controllers
         {
             return View();
         }
-        public IActionResult KalenderKegiatan()
-        {
-            return View();
-        }
+        
 
     }
 }

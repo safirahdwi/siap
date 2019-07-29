@@ -18,5 +18,6 @@ namespace adminLTE.Models
         public virtual OrganisasiOrmawa OrganisasiOrmawa { get; set; }
         public virtual PengajuanProposalKegiatan PengajuanProposalKegiatan { get; set; }
         public virtual ICollection<KalenderKegiatanOrmawa> KalenderKegiatanOrmawa { get; set; }
+        public object JenisKegiatanOrmawaID { get; internal set; }
     }
 }

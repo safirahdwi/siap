@@ -14,5 +14,7 @@ namespace adminLTE.Models
         public string Nama { get; set; }
 
         public virtual ICollection<PengajuanProposalKegiatan> PengajuanProposalKegiatan { get; set; }
+        public object KegiatanOrmawaId { get; internal set; }
+        public int KegiatanOrmawaID { get; internal set; }
     }
 }

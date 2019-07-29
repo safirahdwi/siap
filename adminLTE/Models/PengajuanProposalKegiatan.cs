@@ -30,5 +30,6 @@ namespace adminLTE.Models
         public virtual ICollection<DaftarDokumenOrmawa> DaftarDokumenOrmawa { get; set; }
         public virtual ICollection<KegiatanOrmawa> KegiatanOrmawa { get; set; }
         public virtual ICollection<TahapanPengajuan> TahapanPengajuan { get; set; }
+        public string Nama { get; internal set; }
     }
 }

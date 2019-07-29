@@ -1,0 +1,83 @@
+﻿@model adminLTE.ViewModel.KalenderViewModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_MainMenu.cshtml";
+}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Kegiatan
+        <small>advanced tables</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="https://localhost:44384/Home/Beranda"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Kalender Kegiatan</li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-controller="Anggota" asp-action="AddOrEdit" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <div class="form-group">
+                    <label class="control-label"> Kegiatan</label>
+                    <input asp-for="Id" class="form-control" />
+                    <span asp-validation-for="Id" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Kegiatan</label>
+                    <input asp-for="KegiatanOrmawaId" class="form-control" />
+                    <span asp-validation-for="KegiatanOrmawaId" class="text-danger"></span>
+                </div>
+                <div class="form-group" col-md-6>
+                    <label class="control-label">Waktu Mulai</label>
+                    <input asp-for="Tmt" class="form-control" />
+                    <span asp-validation-for="Tmt" class="text-danger"></span>
+                </div>
+                <div class="form-group" col-md-6>
+                    <label class="control-label">Waktu Selesai</label>
+                    <input asp-for="Tst" class="form-control" />
+                    <span asp-validation-for="Tst" class="text-danger"></span>
+                </div>
+                @*<div class="form-group" col-md-6>
+            <label asp-for="Jabatan" class="control-label"></label>
+            <input asp-for="Id" class="form-control" />
+            <span asp-validation-for="StatusAnggota" class="text-danger"></span>
+        </div>*@
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input type="submit" value="Submit" class="btn btn-primary btn-block" />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <a asp-action="Index" class="btn btn-secondary btn-block">Back to List</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+@*@section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }*@
+<environment include="Development">
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</environment>
+<environment exclude="Development">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+            asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+            asp-fallback-test="window.jQuery"
+            crossorigin="anonymous"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+            asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+            asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+            crossorigin="anonymous"
+            integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+    </script>
+</environment>
