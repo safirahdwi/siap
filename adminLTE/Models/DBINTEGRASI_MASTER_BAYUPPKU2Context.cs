@@ -22,6 +22,7 @@ namespace adminLTE.Models
         public virtual DbSet<JabatanOrmawa> JabatanOrmawa { get; set; }
         public virtual DbSet<JenisKegiatanOrmawa> JenisKegiatanOrmawa { get; set; }
         public virtual DbSet<JenisOrganisasi> JenisOrganisasi { get; set; }
+        public virtual DbSet<JenisPrestasiOrmawa> JenisPrestasiOrmawa { get; set; }
         public virtual DbSet<KalenderKegiatanOrmawa> KalenderKegiatanOrmawa { get; set; }
         public virtual DbSet<KegiatanOrmawa> KegiatanOrmawa { get; set; }
         public virtual DbSet<Mahasiswa> Mahasiswa { get; set; }
@@ -29,9 +30,12 @@ namespace adminLTE.Models
         public virtual DbSet<MahasiswaDoktor> MahasiswaDoktor { get; set; }
         public virtual DbSet<MahasiswaMagister> MahasiswaMagister { get; set; }
         public virtual DbSet<MahasiswaSarjana> MahasiswaSarjana { get; set; }
+        public virtual DbSet<MediaPublikasiOrmawa> MediaPublikasiOrmawa { get; set; }
         public virtual DbSet<Orang> Orang { get; set; }
         public virtual DbSet<OrganisasiOrmawa> OrganisasiOrmawa { get; set; }
         public virtual DbSet<PengajuanProposalKegiatan> PengajuanProposalKegiatan { get; set; }
+        public virtual DbSet<PrestasiOrmawa> PrestasiOrmawa { get; set; }
+        public virtual DbSet<PublikasiOrmawa> PublikasiOrmawa { get; set; }
         public virtual DbSet<StatusPengajuan> StatusPengajuan { get; set; }
         public virtual DbSet<StrukturalOrmawa> StrukturalOrmawa { get; set; }
         public virtual DbSet<TahapanPengajuan> TahapanPengajuan { get; set; }
@@ -170,6 +174,17 @@ namespace adminLTE.Models
             modelBuilder.Entity<JenisOrganisasi>(entity =>
             {
                 entity.ToTable("JenisOrganisasi", "OrmRef");
+
+                entity.Property(e => e.Id).HasColumnName("ID");
+
+                entity.Property(e => e.Nama)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<JenisPrestasiOrmawa>(entity =>
+            {
+                entity.ToTable("JenisPrestasiOrmawa", "OrmRef");
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
@@ -439,6 +454,24 @@ namespace adminLTE.Models
                     .HasConstraintName("FK_MahasiswaSarjana_Mahasiswa");
             });
 
+            modelBuilder.Entity<MediaPublikasiOrmawa>(entity =>
+            {
+                entity.ToTable("MediaPublikasiOrmawa", "OrmMst");
+
+                entity.Property(e => e.Id).HasColumnName("ID");
+
+                entity.Property(e => e.PublikasiOrmawaId).HasColumnName("PublikasiOrmawaID");
+
+                entity.Property(e => e.Urlmedia)
+                    .HasColumnName("URLMedia")
+                    .HasColumnType("text");
+
+                entity.HasOne(d => d.PublikasiOrmawa)
+                    .WithMany(p => p.MediaPublikasiOrmawa)
+                    .HasForeignKey(d => d.PublikasiOrmawaId)
+                    .HasConstraintName("FK_MediaPublikasiOrmawa_PublikasiOrmawa");
+            });
+
             modelBuilder.Entity<Orang>(entity =>
             {
                 entity.ToTable("Orang", "IPBMst");
@@ -590,6 +623,55 @@ namespace adminLTE.Models
                     .WithMany(p => p.PengajuanProposalKegiatan)
                     .HasForeignKey(d => d.TipeKegiatanOrmawaId)
                     .HasConstraintName("FK_PengajuanProposalKegiatan_TipeKegiatanOrmawa");
+            });
+
+            modelBuilder.Entity<PrestasiOrmawa>(entity =>
+            {
+                entity.ToTable("PrestasiOrmawa", "OrmMst");
+
+                entity.Property(e => e.Id).HasColumnName("ID");
+
+                entity.Property(e => e.InstitusiPenyelenggara)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.JenisPrestasiOrmawaId).HasColumnName("JenisPrestasiOrmawaID");
+
+                entity.Property(e => e.NamaPrestasi)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.OrganisasiOrmawaId).HasColumnName("OrganisasiOrmawaID");
+
+                entity.HasOne(d => d.JenisPrestasiOrmawa)
+                    .WithMany(p => p.PrestasiOrmawa)
+                    .HasForeignKey(d => d.JenisPrestasiOrmawaId)
+                    .HasConstraintName("FK_PrestasiOrmawa_JenisPrestasiOrmawa");
+
+                entity.HasOne(d => d.OrganisasiOrmawa)
+                    .WithMany(p => p.PrestasiOrmawa)
+                    .HasForeignKey(d => d.OrganisasiOrmawaId)
+                    .HasConstraintName("FK_PrestasiOrmawa_OrganisasiOrmawa");
+            });
+
+            modelBuilder.Entity<PublikasiOrmawa>(entity =>
+            {
+                entity.ToTable("PublikasiOrmawa", "OrmMst");
+
+                entity.Property(e => e.Id).HasColumnName("ID");
+
+                entity.Property(e => e.Isi).HasColumnType("text");
+
+                entity.Property(e => e.Judul).HasColumnType("text");
+
+                entity.Property(e => e.OrganisasiOrmawaId).HasColumnName("OrganisasiOrmawaID");
+
+                entity.Property(e => e.TanggalInsert).HasColumnType("datetime");
+
+                entity.HasOne(d => d.OrganisasiOrmawa)
+                    .WithMany(p => p.PublikasiOrmawa)
+                    .HasForeignKey(d => d.OrganisasiOrmawaId)
+                    .HasConstraintName("FK_PublikasiOrmawa_OrganisasiOrmawa");
             });
 
             modelBuilder.Entity<StatusPengajuan>(entity =>

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\IPB\\siap\\adminLTE\\adminLTE.csproj": {}
+    "C:\\Users\\HP\\Documents\\PKLnew\\adminLTE\\adminLTE.csproj": {}
   },
   "projects": {
-    "E:\\IPB\\siap\\adminLTE\\adminLTE.csproj": {
+    "C:\\Users\\HP\\Documents\\PKLnew\\adminLTE\\adminLTE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\IPB\\siap\\adminLTE\\adminLTE.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Documents\\PKLnew\\adminLTE\\adminLTE.csproj",
         "projectName": "adminLTE",
-        "projectPath": "E:\\IPB\\siap\\adminLTE\\adminLTE.csproj",
-        "packagesPath": "C:\\Users\\Dwika Ayu Noianti\\.nuget\\packages\\",
-        "outputPath": "E:\\IPB\\siap\\adminLTE\\obj\\",
+        "projectPath": "C:\\Users\\HP\\Documents\\PKLnew\\adminLTE\\adminLTE.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP\\Documents\\PKLnew\\adminLTE\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dwika Ayu Noianti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,6 +57,10 @@
               "version": "[2.2.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Analyzers": {
               "target": "Package",
               "version": "[2.2.6, )"
             },
