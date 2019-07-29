@@ -9,6 +9,8 @@ namespace adminLTE.Models
         {
             AnggotaOrmawa = new HashSet<AnggotaOrmawa>();
             KegiatanOrmawa = new HashSet<KegiatanOrmawa>();
+            PrestasiOrmawa = new HashSet<PrestasiOrmawa>();
+            PublikasiOrmawa = new HashSet<PublikasiOrmawa>();
             StrukturalOrmawa = new HashSet<StrukturalOrmawa>();
         }
 
@@ -23,6 +25,8 @@ namespace adminLTE.Models
         public virtual JenisOrganisasi JenisOrganisasi { get; set; }
         public virtual ICollection<AnggotaOrmawa> AnggotaOrmawa { get; set; }
         public virtual ICollection<KegiatanOrmawa> KegiatanOrmawa { get; set; }
+        public virtual ICollection<PrestasiOrmawa> PrestasiOrmawa { get; set; }
+        public virtual ICollection<PublikasiOrmawa> PublikasiOrmawa { get; set; }
         public virtual ICollection<StrukturalOrmawa> StrukturalOrmawa { get; set; }
     }
 }
