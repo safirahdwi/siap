@@ -139,7 +139,6 @@ E:\IPB\siap\adminLTE\obj\Debug\netcoreapp2.2\Razor\Views\Home\Beranda.g.cshtml.c
 E:\IPB\siap\adminLTE\obj\Debug\netcoreapp2.2\Razor\Views\Home\coba.g.cshtml.cs
 E:\IPB\siap\adminLTE\obj\Debug\netcoreapp2.2\Razor\Views\Home\Daftarprestasi.g.cshtml.cs
 E:\IPB\siap\adminLTE\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
-E:\IPB\siap\adminLTE\obj\Debug\netcoreapp2.2\Razor\Views\Home\KalenderKegiatan.g.cshtml.cs
 E:\IPB\siap\adminLTE\obj\Debug\netcoreapp2.2\Razor\Views\Home\login.g.cshtml.cs
 E:\IPB\siap\adminLTE\obj\Debug\netcoreapp2.2\Razor\Views\Home\Pengarsipan.g.cshtml.cs
 E:\IPB\siap\adminLTE\obj\Debug\netcoreapp2.2\Razor\Views\Home\PreviewPublikasi.g.cshtml.cs
@@ -162,3 +161,6 @@ E:\IPB\siap\adminLTE\obj\Debug\netcoreapp2.2\adminLTE.Views.pdb
 E:\IPB\siap\adminLTE\obj\Debug\netcoreapp2.2\adminLTE.dll
 E:\IPB\siap\adminLTE\obj\Debug\netcoreapp2.2\adminLTE.pdb
 E:\IPB\siap\adminLTE\obj\Debug\netcoreapp2.2\adminLTE.csproj.CopyComplete
+E:\IPB\siap\adminLTE\obj\Debug\netcoreapp2.2\Razor\Views\Kalender\KalenderKegiatan.g.cshtml.cs
+E:\IPB\siap\adminLTE\obj\Debug\netcoreapp2.2\Razor\Views\Kalender\AddorEdit.g.cshtml.cs
+E:\IPB\siap\adminLTE\obj\Debug\netcoreapp2.2\Razor\Views\Upload\Index.g.cshtml.cs
